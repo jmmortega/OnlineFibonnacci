@@ -27,8 +27,16 @@ namespace Fibonacci
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            labelTimeDesarrollo.Text = "Tiempo de desarrollo algoritmo: 0";
+            long ticks = System.Environment.TickCount;
+
             m_code = new LoadAlgorithms().Load(LoadAlgorithms.c_Tail_Recursive_Url);
             Compile(m_code);
+
+            TimeSpan time = new TimeSpan(System.Environment.TickCount - ticks);
+
+            labelTimeCarga.Text = string.Format("Tiempo de carga {0}", time.ToString());
+
         }
         
         private string m_code = string.Empty;
@@ -37,7 +45,7 @@ namespace Fibonacci
         {
             Dictionary<string, string> providerOptions = new Dictionary<string, string>
                 {
-                    {"CompilerVersion", "v3.5"}
+                    {"CompilerVersion", "v4.0"}
                 };
             CSharpCodeProvider provider = new CSharpCodeProvider(providerOptions);
 
@@ -84,6 +92,8 @@ namespace Fibonacci
 
         private void buttonDo_Click(object sender, EventArgs e)
         {
+            long ticks = System.Environment.TickCount;
+
             string message = CheckOK();
 
             if (string.IsNullOrEmpty(message) == true)
@@ -103,6 +113,8 @@ namespace Fibonacci
             {
                 MessageBox.Show(message);
             }
+
+            labelTimeEjecucion.Text = string.Format("Tiempo de ejecución: {0}", new TimeSpan(System.Environment.TickCount - ticks).ToString());
         }
 
         private void linkLabelWhy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

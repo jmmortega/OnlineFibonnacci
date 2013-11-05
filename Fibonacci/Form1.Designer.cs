@@ -34,6 +34,9 @@
             this.textBoxResult = new System.Windows.Forms.TextBox();
             this.linkLabelWhy = new System.Windows.Forms.LinkLabel();
             this.buttonShowCode = new System.Windows.Forms.Button();
+            this.labelTimeDesarrollo = new System.Windows.Forms.Label();
+            this.labelTimeCarga = new System.Windows.Forms.Label();
+            this.labelTimeEjecucion = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonDo
@@ -92,11 +95,38 @@
             this.buttonShowCode.UseVisualStyleBackColor = true;
             this.buttonShowCode.Click += new System.EventHandler(this.buttonShowCode_Click);
             // 
+            // labelTimeDesarrollo
+            // 
+            this.labelTimeDesarrollo.AutoSize = true;
+            this.labelTimeDesarrollo.Location = new System.Drawing.Point(255, 330);
+            this.labelTimeDesarrollo.Name = "labelTimeDesarrollo";
+            this.labelTimeDesarrollo.Size = new System.Drawing.Size(0, 13);
+            this.labelTimeDesarrollo.TabIndex = 8;
+            // 
+            // labelTimeCarga
+            // 
+            this.labelTimeCarga.AutoSize = true;
+            this.labelTimeCarga.Location = new System.Drawing.Point(255, 343);
+            this.labelTimeCarga.Name = "labelTimeCarga";
+            this.labelTimeCarga.Size = new System.Drawing.Size(0, 13);
+            this.labelTimeCarga.TabIndex = 9;
+            // 
+            // labelTimeEjecucion
+            // 
+            this.labelTimeEjecucion.AutoSize = true;
+            this.labelTimeEjecucion.Location = new System.Drawing.Point(255, 356);
+            this.labelTimeEjecucion.Name = "labelTimeEjecucion";
+            this.labelTimeEjecucion.Size = new System.Drawing.Size(0, 13);
+            this.labelTimeEjecucion.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 392);
+            this.Controls.Add(this.labelTimeEjecucion);
+            this.Controls.Add(this.labelTimeCarga);
+            this.Controls.Add(this.labelTimeDesarrollo);
             this.Controls.Add(this.buttonShowCode);
             this.Controls.Add(this.linkLabelWhy);
             this.Controls.Add(this.textBoxResult);
@@ -121,6 +151,9 @@
         private System.Windows.Forms.TextBox textBoxResult;
         private System.Windows.Forms.LinkLabel linkLabelWhy;
         private System.Windows.Forms.Button buttonShowCode;
+        private System.Windows.Forms.Label labelTimeDesarrollo;
+        private System.Windows.Forms.Label labelTimeCarga;
+        private System.Windows.Forms.Label labelTimeEjecucion;
     }
 }
 
