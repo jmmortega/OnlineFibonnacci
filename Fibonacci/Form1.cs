@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Microsoft.CSharp;
 using System.CodeDom.Compiler;
 using System.Reflection;
+using System.Diagnostics;
 
 namespace Fibonacci
 {
@@ -102,6 +103,12 @@ namespace Fibonacci
             {
                 MessageBox.Show(message);
             }
+        }
+
+        private void linkLabelWhy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://devthisblog.namocode.es/index.php/mas-alla-del-fibonacci/");
+            
         }
 
 

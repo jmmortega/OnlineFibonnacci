@@ -80,6 +80,7 @@
             this.linkLabelWhy.TabIndex = 6;
             this.linkLabelWhy.TabStop = true;
             this.linkLabelWhy.Text = "Why this fibonacci implementation?";
+            this.linkLabelWhy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelWhy_LinkClicked);
             // 
             // buttonShowCode
             // 
